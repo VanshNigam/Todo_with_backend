@@ -1,5 +1,5 @@
 export const addItemToServer = async (task, date) => {
-  const response = await fetch("http://localhost:3001/api/todo", {
+  const response = await fetch("https://todo-with-backend-c8xr.onrender.com/api/todo", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,14 +11,14 @@ export const addItemToServer = async (task, date) => {
 };
 
 export const getItemsFromServer = async () => {
-  const response = await fetch("http://localhost:3001/api/todo");
+  const response = await fetch("https://todo-with-backend-c8xr.onrender.com/api/todo");
   const items = await response.json();
   return items.map(mapServerItemToLocalItem);
 };
 
 export const markItemCompletedOnServer = async (id) => {
   const response = await fetch(
-    `http://localhost:3001/api/todo/${id}/completed`,
+    `https://todo-with-backend-c8xr.onrender.com/api/todo/${id}/completed`,
     {
       method: "PUT",
     }
