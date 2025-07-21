@@ -15,7 +15,7 @@ const cors = require('cors');
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.use(cors())
+app.use(cors({origin:"https://todo-with-backend-six.vercel.app"}))
 
 app.use("/api/todo",todoItemsRouter)
 app.use(errorsController.pageNotFound);
