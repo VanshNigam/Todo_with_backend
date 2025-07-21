@@ -28,7 +28,7 @@ export const markItemCompletedOnServer = async (id) => {
 };
 
 export const deleteItemFromServer = async (id) => {
-  await fetch(`http://localhost:3001/api/todo/${id}`, {
+  await fetch(`https://todo-with-backend-c8xr.onrender.com/api/todo/${id}`, {
     method: "DELETE",
   });
   return id;
